@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import {Card} from "./components/Card.styled";
+import {BodyCard} from "./components/BodyCard.styled";
+import {Text} from "./components/Text.styled";
+import {Title} from "./components/Title.styled";
+import {WrapperBtnStyled} from "./components/WrapperBtn.styled";
+import {Btn} from "./components/Btn.styled";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Card>
+            <img src='image.png' alt='image'/>
+
+            <BodyCard>
+                <Title>Headline</Title>
+                <Text>Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in venen.</Text>
+                <WrapperBtnStyled>
+                    <Btn primary>See more</Btn>
+                    <Btn outlined>Save</Btn>
+                </WrapperBtnStyled>
+            </BodyCard>
+        </Card>
+    );
 }
 
 export default App;
